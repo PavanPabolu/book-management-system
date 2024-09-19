@@ -1,0 +1,19 @@
+<p>book-list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center"> List of books</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="list-group mt-3">
+                <div *ngFor="let book of books" class="list-group-item align-items">
+                    {{book.id}} |  {{book.title}} | {{book.author}}
+                    <button (click)="deleteABook(book.id)" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
